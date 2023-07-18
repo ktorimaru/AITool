@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "fileview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ktorimaru/FileView",
+      "state" : {
+        "revision" : "e4adfa37161c32e82e95f626835b2a4a1679101c",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "openaiswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ktorimaru/OpenAISwift",
+      "state" : {
+        "branch" : "chat_paring",
+        "revision" : "020e65ba070b4edff2f56c3842263f7836753ef2"
+      }
+    }
+  ],
+  "version" : 2
+}
