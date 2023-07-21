@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FileView
 
 struct NewPromptFile: View {
     @EnvironmentObject var model: Model
@@ -46,18 +47,24 @@ struct NewPromptFile: View {
                         }
 
                         DispatchQueue.main.async {
+                            var temp: PromptFile
                             switch selection {
                             case 0:
-                                _ = model.simplePromptFile(fileName: fileName)
+                                temp = model.simplePromptFile(fileName: fileName)
                             case 1:
-                                _ = model.blankPromptFile(fileName: fileName)
+                                temp = model.blankPromptFile(fileName: fileName)
                             case 2:
-                                _ = model.pizzaPromptFile(fileName: fileName)
+                                temp = model.pizzaPromptFile(fileName: fileName)
                             default:
                                 print("Should never get here")
+                                temp = PromptFile()
                             }
-                            //model.readDirectory()
-//                            model.selectedFile.name = "\(fileName).json"
+                            let fileManager = FileManager.default
+                            let currentDirectoryURL = fileManager.currentDirectoryPath
+                            let fileURL = URL(fileURLWithPath: currentDirectoryURL).appendingPathComponent(temp.fileName)
+
+                            model.fvModel.selected = FileItem(path: fileURL, name: temp.name, load: true)
+                            model.fvModel.home.selected = model.fvModel.selected?.id ?? UUID()
                             model.newFileIsPresented = false
                         }
                             

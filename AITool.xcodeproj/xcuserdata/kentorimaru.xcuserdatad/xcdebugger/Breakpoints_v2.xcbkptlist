@@ -77,8 +77,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "copyAddPrompt(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -93,8 +93,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "copyAddPrompt(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -109,8 +109,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "sendChat(with:)"
             landmarkType = "7">
             <Locations>
@@ -187,8 +187,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "sendChat(with:)"
             landmarkType = "7">
             <Locations>
@@ -470,114 +470,6 @@
                   startingLineNumber = "152"
                   endingLineNumber = "152"
                   offsetFromSymbolStart = "1118">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AITool/Models/Model.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "sendChat(with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F - 2316d6b00fc09d1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "1349">
-               </Location>
-               <Location
-                  uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F - 2316d6b00fc09d1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "1893">
-               </Location>
-               <Location
-                  uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F - 2316d6b00fc09d1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "1220">
-               </Location>
-               <Location
-                  uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F - 2316d6b00fc09d1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "1318">
-               </Location>
-               <Location
-                  uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F - 2316d6b00fc09d7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "1220">
-               </Location>
-               <Location
-                  uuid = "CF367569-E20E-47E0-B2D0-EEE59D6FF56F - 2316d6b00fc09d7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "1318">
                </Location>
             </Locations>
          </BreakpointContent>

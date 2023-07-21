@@ -49,7 +49,7 @@ class Model: ObservableObject {
                 if !value.isDirectory {
                     do {
                         print(path)
-                        //let data = try Data(contentsOf: path)
+                        lastChatRun = [ChatMessage]()
                         currentPromptFile = try PromptFile(from: path)
                         showDetail.toggle()
                     } catch {
@@ -159,7 +159,10 @@ class Model: ObservableObject {
         if let ai = openAI {
             do {
                 
-                let result = try await ai.sendChat(with: temp, model: OpenAIModelType.chat(.chatgpt), temperature: currentPromptFile.temperature)
+                let result = try await ai.sendChat(
+                    with: temp,
+                    model: (currentPromptFile.model == "gpt-3.5-turbo" ?  OpenAIModelType.chat(.chatgpt) : .gpt4(.gpt4)),
+                    temperature: currentPromptFile.temperature)
                 //let result = try await ai.sendChat(with: temp, model: .gpt4(.gpt4) , temperature: currentPromptFile.temperature)
                 if let choice = result.choices?.first, let _ = result.choices?.count {
                     temp.append(choice.message)
@@ -208,6 +211,8 @@ class Model: ObservableObject {
     
     func simplePromptFile(fileName: String) -> PromptFile {
         var temp = PromptFile()
+        temp.name = fileName
+        temp.model = "gpt-3.5-turbo"
         temp.fileName = "\(fileName).json"
         temp.tableMessages = [TableMessage]()
         temp.tableMessages.append(
@@ -223,6 +228,8 @@ class Model: ObservableObject {
     
     func blankPromptFile(fileName: String) -> PromptFile {
         var temp = PromptFile()
+        temp.name = fileName
+        temp.model = "gpt-3.5-turbo"
         temp.fileName = "\(fileName).json"
         temp.tableMessages = [TableMessage]()
         do {
@@ -235,6 +242,8 @@ class Model: ObservableObject {
     
     func pizzaPromptFile(fileName: String) -> PromptFile {
         var temp = PromptFile()
+        temp.name = fileName
+        temp.model = "gpt-3.5-turbo"
         temp.fileName = "\(fileName).json"
         temp.tableMessages = [TableMessage]()
         temp.tableMessages.append(
@@ -254,6 +263,13 @@ class Model: ObservableObject {
             print("\(#function) Error: \(error.localizedDescription)")
         }
         return temp
+    }
+    
+    func refreshDir(){
+//        fvModel.$selected = selected
+        DispatchQueue.main.async {
+            self.fvModel.objectWillChange.send()
+        }
     }
 
 }
