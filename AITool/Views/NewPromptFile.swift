@@ -66,6 +66,7 @@ struct NewPromptFile: View {
                             model.fvModel.selected = FileItem(path: fileURL, name: temp.name, load: true)
                             model.fvModel.home.selected = model.fvModel.selected?.id ?? UUID()
                             model.newFileIsPresented = false
+                            model.fvModel.update.toggle()
                         }
                             
                     }.disabled(fileName == "")

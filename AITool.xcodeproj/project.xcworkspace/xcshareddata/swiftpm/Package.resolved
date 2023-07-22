@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ktorimaru/FileView",
       "state" : {
-        "revision" : "e4adfa37161c32e82e95f626835b2a4a1679101c",
-        "version" : "0.1.1"
+        "revision" : "3805215734e56e46d65bb4b308608ddd4c0bc01c",
+        "version" : "0.1.2"
       }
     },
     {

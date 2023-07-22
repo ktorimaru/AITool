@@ -15,7 +15,7 @@ struct ContentView: View {
 #endif
 #if os(macOS)
     @State var visibility: NavigationSplitViewVisibility = .all
-    
+    @State var update = false
     var body: some View {
         NavigationSplitView (columnVisibility: $visibility) {
             ScrollView {
@@ -53,8 +53,10 @@ struct ContentView: View {
                     }
                 }
                 Button("**Iterate**") {
+                    model.showWorking = true
                     model.saveCurrentPromptFile()
                     model.runIterateChat()
+                    
                 }
                 .buttonStyle(ColorButtonStyle())
             }
@@ -68,6 +70,13 @@ struct ContentView: View {
             }.buttonStyle(.borderless)
             .popover(isPresented: $model.showCoffee, content: Coffee.init)
 
+        }
+        .alert("Iterating", isPresented: $model.showWorking){
+            Button("Cancel Iteration") {
+                print("Cancel Iteration")
+                model.task?.cancel()
+//                model.task2?.cancel()
+            }
         }
 
     }

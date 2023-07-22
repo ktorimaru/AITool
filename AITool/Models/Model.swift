@@ -75,13 +75,21 @@ class Model: ObservableObject {
     }
     @Published var showKeyView = false
     @Published var showError = false
+    @Published var showWorking = false
     
     @Published var lastError: Error?
     @Published var showCoffee = false
+    var task: Task<Void, Never>?
+    var task2: Task<[ChatMessage], Error>?
+    
     func runIterateChat() {
-        Task {
+        task = Task {
             do {
                 let chat = try await iterateChat()
+//                try Task.checkCancellation()
+                if Task.isCancelled {
+                    return
+                }
                 DispatchQueue.main.async {
                     self.lastChatRun = chat
                     if self.lastChatRun.count > self.currentPromptFile.tableMessages.count {
@@ -91,9 +99,11 @@ class Model: ObservableObject {
                     }
                 }
             } catch {
-                print("\(#function) Error: \(error.localizedDescription)")
-                lastError = error
-                showError.toggle()
+                if type(of: error) != CancellationError.self {
+                    print("\(#function) Error: \(error.localizedDescription)")
+                    lastError = error
+                    showError.toggle()
+                }
             }
         }
 
@@ -151,12 +161,14 @@ class Model: ObservableObject {
             print("Error: \(error.localizedDescription)")
             throw error
         }
+        showWorking = false
         return temp
     }
 
     func sendChat(with: [ChatMessage]) async throws -> [ChatMessage] {
         var temp = with
         if let ai = openAI {
+            
             do {
                 
                 let result = try await ai.sendChat(
@@ -164,6 +176,7 @@ class Model: ObservableObject {
                     model: (currentPromptFile.model == "gpt-3.5-turbo" ?  OpenAIModelType.chat(.chatgpt) : .gpt4(.gpt4)),
                     temperature: currentPromptFile.temperature)
                 //let result = try await ai.sendChat(with: temp, model: .gpt4(.gpt4) , temperature: currentPromptFile.temperature)
+//                try Task.checkCancellation()
                 if let choice = result.choices?.first, let _ = result.choices?.count {
                     temp.append(choice.message)
                 }
