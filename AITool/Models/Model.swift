@@ -14,6 +14,8 @@ import OpenAISwift
 class Model: ObservableObject {
     
     init() {
+//        monitor = Monitor(fileURL: URL.documentsDirectory, fileDidChange: fileDidChange)
+//        monitor?.start()
         cancellable = fvModel.$selected.assign(to: \.selected, on: self)
         let _ = FileManager.default.changeCurrentDirectoryPath(URL.documentsDirectory.path())
         print(FileManager.default.currentDirectoryPath)
@@ -51,7 +53,7 @@ class Model: ObservableObject {
                         print(path)
                         lastChatRun = [ChatMessage]()
                         currentPromptFile = try PromptFile(from: path)
-                        showDetail.toggle()
+                        showDetail = true
                     } catch {
                         print("\(#function) Model Error \n\(path.absoluteString)\n\(error.localizedDescription)")
                     }
@@ -81,6 +83,17 @@ class Model: ObservableObject {
     @Published var showCoffee = false
     var task: Task<Void, Never>?
     var task2: Task<[ChatMessage], Error>?
+    var monitor: Monitor?
+//    func fileDidChange() {
+//        print("\(#function)")
+//        DispatchQueue.main.async {
+//            self.fvModel.update.toggle()
+//            self.fvModel.home.expanded = false
+//            self.fvModel.home.load()
+//            self.fvModel.objectWillChange.send()
+//            self.objectWillChange.send()
+//        }
+//    }
     
     func runIterateChat() {
         task = Task {

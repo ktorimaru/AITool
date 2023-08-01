@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E53A77832A6F291600EF2BFC /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53A77822A6F291600EF2BFC /* Monitor.swift */; };
 		E54C238F2A5F4FEB001B3B73 /* AIToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C238E2A5F4FEB001B3B73 /* AIToolApp.swift */; };
 		E54C23912A5F4FEB001B3B73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C23902A5F4FEB001B3B73 /* ContentView.swift */; };
 		E54C23932A5F4FED001B3B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C23922A5F4FED001B3B73 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E53A77822A6F291600EF2BFC /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		E54C238B2A5F4FEB001B3B73 /* AITool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54C238E2A5F4FEB001B3B73 /* AIToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIToolApp.swift; sourceTree = "<group>"; };
 		E54C23902A5F4FEB001B3B73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				E54C23A22A5F52B8001B3B73 /* Model.swift */,
 				E54C23A82A5F77A9001B3B73 /* DataStructs.swift */,
+				E53A77822A6F291600EF2BFC /* Monitor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				E54C23A32A5F52B8001B3B73 /* Model.swift in Sources */,
 				E54C23B42A60A46B001B3B73 /* TableRowPicker.swift in Sources */,
+				E53A77832A6F291600EF2BFC /* Monitor.swift in Sources */,
 				E54C23A72A5F6EF9001B3B73 /* Styles.swift in Sources */,
 				E54C23B22A60A417001B3B73 /* ModelSettingsView.swift in Sources */,
 				E54C23B82A61E5EC001B3B73 /* SetKeyView.swift in Sources */,

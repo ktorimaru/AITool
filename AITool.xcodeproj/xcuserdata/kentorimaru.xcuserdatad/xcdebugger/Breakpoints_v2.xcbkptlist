@@ -14,8 +14,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "copyAddPrompt(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "copyAddPrompt(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "sendChat(with:)"
             landmarkType = "7">
             <Locations>
@@ -124,8 +124,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "sendChat(with:)"
             landmarkType = "7">
             <Locations>
@@ -172,8 +172,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "iterateChat()"
             landmarkType = "7">
             <Locations>
@@ -235,8 +235,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "iterateChat()"
             landmarkType = "7">
             <Locations>
@@ -343,8 +343,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "iterateChat()"
             landmarkType = "7">
             <Locations>
@@ -421,69 +421,54 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "sendChat(with:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - a3810b2ff0ed3169"
+                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - c944b6000ccd6743"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(3) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
                   moduleName = "AITool"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
+                  urlString = "file:///Users/kentorimaru/Documents/Projects/LLM/AITool/AITool/Models/Model.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "186"
-                  endingLineNumber = "186"
-                  offsetFromSymbolStart = "1861">
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "1299">
                </Location>
                <Location
-                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - 2316d6b00fc09f6a"
+                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - 49d36b9ff3e0c9a7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
                   moduleName = "AITool"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
+                  urlString = "file:///Users/kentorimaru/Documents/Projects/LLM/AITool/AITool/Models/Model.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "186"
-                  endingLineNumber = "186"
-                  offsetFromSymbolStart = "405">
-               </Location>
-               <Location
-                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - 2316d6b00fc09f6a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
-                  moduleName = "AITool"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "186"
-                  endingLineNumber = "186"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
                   offsetFromSymbolStart = "1300">
                </Location>
                <Location
-                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - 2316d6b00fc09f6a"
+                  uuid = "1D8410B8-08E6-4640-BB29-C7880F592B30 - 49d36b9ff3e0c9a7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for AITool.Model.sendChat(with: Swift.Array&lt;OpenAISwift.ChatMessage&gt;) async throws -&gt; Swift.Array&lt;OpenAISwift.ChatMessage&gt;"
                   moduleName = "AITool"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kentorimaru/Documents/Projects/AITool/AITool/Models/Model.swift"
+                  urlString = "file:///Users/kentorimaru/Documents/Projects/LLM/AITool/AITool/Models/Model.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "186"
-                  endingLineNumber = "186"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
                   offsetFromSymbolStart = "1410">
                </Location>
             </Locations>
@@ -499,8 +484,8 @@
             filePath = "AITool/Models/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "runIterateChat()"
             landmarkType = "7">
             <Locations>
