@@ -30,7 +30,12 @@ struct ToolView: View {
             }.padding([.leading, .trailing])
             Divider()
             HStack {
-                Text("Prompt Script").font(.largeTitle)
+                Text("Prompt Script")
+#if (macOS)
+                .font(.largeTitle)
+#else
+                .font(.headline)
+#endif
                 Spacer()
             }.padding([.leading, .trailing])
             ScrollView(.vertical) {
@@ -84,18 +89,23 @@ struct ToolView: View {
                             }
                             //Spacer()
                             //if model.currentPromptFile.tableMessages[idx].role != .assistant {
-                                VStack(alignment: .center) {
+                            VStack(alignment: .trailing) {
                                     Toggle(isOn: $model.currentPromptFile.tableMessages[idx].save, label: {EmptyView()})
 #if (macOS)
-                                        .toggleStyle(.checkbox)
+                                    .toggleStyle(.automatic)
+#else
+                                    .toggleStyle(CheckboxStyle())
 #endif
+                                        
+//                                        .frame(width: 24)
                                     Button(action: {
                                         DispatchQueue.main.async {
                                             model.removePrompt(index: idx)
                                             print("model.removePrompt(index: idx)")
                                         }
                                     }) {
-                                        Image(systemName: "minus.circle").font(.title)
+                                        Image(systemName: "minus.circle")
+//                                            .font(.title)
                                     }.buttonStyle(BorderlessButtonStyle())
                                     Button(action: {
                                         DispatchQueue.main.async {
@@ -103,13 +113,12 @@ struct ToolView: View {
                                             print("model.copyAddPrompt(index: idx)")
                                         }
                                     }) {
-                                        Image(systemName: "plus.circle").font(.title)
+                                        Image(systemName: "plus.circle")
+//                                            .font(.title)
                                     }.buttonStyle(BorderlessButtonStyle())
-                                }.padding()
-                            //} else {
-                            //    EmptyView()
-                            //}
-
+                                }
+                                .frame(maxWidth: 20)
+                                .padding()
                         }
                         .padding(idx % 2 == 0 ? [.top, .bottom] : [], idx % 2 == 0 ? 8 : 0)
 

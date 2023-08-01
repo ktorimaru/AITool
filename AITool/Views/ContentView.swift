@@ -55,6 +55,40 @@ struct ContentView: View {
                                     Button("New") {
                                         model.newFileIsPresented.toggle()
                                     }
+                                    .popover(isPresented: $model.newFileIsPresented, attachmentAnchor: .rect(.bounds), content: NewPromptFile.init)
+                                }
+                                
+                                    if model.selected != nil {
+                                        ToolbarItem(placement: .navigationBarTrailing) {
+                                            Button("Save") {
+                                                do {
+                                                    try model.currentPromptFile.saveFile()
+                                                    print("file saved")
+                                                } catch {
+                                                    print("Couldn't save")
+                                                }
+                                            }
+                                        }
+                                        ToolbarItem(placement: .navigationBarTrailing) {
+                                            Button("**Iterate**") {
+                                                model.showWorking = true
+                                                model.saveCurrentPromptFile()
+                                                model.runIterateChat()
+                                            }
+                                            .buttonStyle(ColorButtonStyle())
+                                        }
+                                    }
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button(action : { model.showKeyView.toggle() }) {
+                                        Image(systemName: "gear")
+                                    }
+                                    .popover(isPresented: $model.showKeyView, attachmentAnchor: .rect(.bounds), content: SetKeyView.init)
+                                }
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button(action : { model.showCoffee.toggle() }) {
+                                        Text("☕️").font(.largeTitle)
+                                    }.buttonStyle(.borderless)
+                                    .popover(isPresented: $model.showCoffee, content: Coffee.init)
                                 }
                             }
                             .navigationTitle("AITool")
@@ -88,7 +122,7 @@ struct ContentView: View {
                 Button("New") {
                     model.newFileIsPresented.toggle()
                 }
-                .popover(isPresented: $model.newFileIsPresented, content: NewPromptFile.init)
+                .popover(isPresented: $model.newFileIsPresented, attachmentAnchor: .rect(.bounds), content: NewPromptFile.init)
                 
                 if model.selected != nil {
                     Button("Save") {
@@ -113,7 +147,7 @@ struct ContentView: View {
                 Button(action : { model.showKeyView.toggle() }) {
                     Image(systemName: "gear")
                 }
-                .popover(isPresented: $model.showKeyView, content: SetKeyView.init)
+                .popover(isPresented: $model.showKeyView, attachmentAnchor: .rect(.bounds), content: SetKeyView.init)
                 Button(action : { model.showCoffee.toggle() }) {
                     Text("☕️").font(.largeTitle)
                 }.buttonStyle(.borderless)
@@ -123,11 +157,8 @@ struct ContentView: View {
             .toolbarRole(.automatic)
             .navigationTitle("AITool")
 #if os(iOS)
-//            .toolbarBackground(.green .gradient, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
-            
 #endif
 
             

@@ -23,3 +23,25 @@ struct ColorButtonStyle: ButtonStyle {
         //.saturation(isEnabled ? 1 : 0)
     }
 }
+
+struct CheckboxStyle: ToggleStyle {
+ 
+    func makeBody(configuration: Self.Configuration) -> some View {
+ 
+        return HStack {
+ 
+            configuration.label
+ 
+//            Spacer()
+            Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
+                .resizable()
+                .frame(width: 18, height: 18)
+                .foregroundColor(configuration.isOn ? .blue : .gray)
+                .font(.system(size: 18, weight: .bold, design: .default))
+                .onTapGesture {
+                    configuration.isOn.toggle()
+                }
+        }
+ 
+    }
+}

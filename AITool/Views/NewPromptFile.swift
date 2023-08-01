@@ -69,22 +69,29 @@ struct NewPromptFile: View {
                             model.fvModel.update.toggle()
                         }
                             
-                    }.disabled(fileName == "")
+                    }
+                    .buttonStyle(ColorButtonStyle())
+                    .disabled(fileName == "")
+                    Spacer()
                     Button("Cancel") {
                         model.newFileIsPresented = false
                         print("Cancel")
                     }
+                    .buttonStyle(ColorButtonStyle())
+                    Spacer()
 
                 }
             }
 #if os(macOS)
             .pickerStyle(.radioGroup)
-#endif
             .padding()
+#endif
             Spacer()
         }
 #if os(macOS)
         .frame(width: 400, height: 300)
+#else
+        .frame(minWidth: 400, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
 #endif
     }
 }
